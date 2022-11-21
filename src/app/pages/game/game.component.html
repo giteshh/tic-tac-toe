@@ -1,1 +1,19 @@
-<p>game works!</p>
+<div class="container-fluid">
+
+  <h1 class="gameHeading" *ngIf="freshPage || winner">TIC TAC TOE</h1>
+  <h4 class="mb-4" *ngIf="!winner && !isDraw && !freshPage"> Current Player: {{this.player}}</h4>
+  <h4 class="mt-4 mb-4" *ngIf="winner"> Player <b class="text-danger">{{winner}}</b> won the game!</h4>
+  <h4 *ngIf="isDraw">The Game is Draw !!</h4>
+  <button class="btn btn-danger" (click)="newGame()"
+          *ngIf="winner || isDraw || freshPage">Start Game
+  </button>
+
+  <!--  Game board section-->
+  <section *ngIf="!winner && !isDraw">
+    <app-board *ngFor="let val of squares; let i = index"
+               (click)="makeMove(i)"
+               [value]="val">
+    </app-board>
+  </section>
+
+</div>
