@@ -1,17 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { AppRoutingModule } from './app-routing.module';
-import { GameComponent } from './pages/game/game.component';
+import {NgModule} from '@angular/core';
+import {AppComponent} from "./app.component";
+import {GameComponent} from "./pages/game/game.component";
+import {BrowserModule} from "@angular/platform-browser";
+import {AppRoutingModule} from "./app-routing.module";
 
 
 @NgModule({
   declarations: [
+    AppComponent,
     GameComponent
   ],
   imports: [
-    CommonModule,
+    BrowserModule,
     AppRoutingModule
-  ]
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
