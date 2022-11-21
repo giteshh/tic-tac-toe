@@ -6,11 +6,13 @@ button {
 }
 
 #btnX {
-  background: #2C3E50;
+  background: #3f87a6;
+  color: white;
 }
 
 #btnO {
-  background: palevioletred;
+  background: #F69D3C;
+  color: white;
 }
 
 @media only screen and (max-width: 480px) {

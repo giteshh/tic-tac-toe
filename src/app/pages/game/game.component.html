@@ -1,12 +1,15 @@
 <div class="container-fluid">
 
-  <h1 class="gameHeading" *ngIf="freshPage || winner">TIC TAC TOE</h1>
-  <h4 class="mb-4" *ngIf="!winner && !isDraw && !freshPage"> Current Player: {{this.player}}</h4>
-  <h4 class="mt-4 mb-4" *ngIf="winner"> Player <b class="text-danger">{{winner}}</b> won the game!</h4>
-  <h4 *ngIf="isDraw">The Game is Draw !!</h4>
-  <button class="btn btn-danger" (click)="newGame()"
+  <h1 class="gameHeading" *ngIf="freshPage || winner || isDraw">TIC TAC TOE</h1>
+  <h3 class="mt-4 mb-4" *ngIf="!winner && !isDraw && !freshPage"> Current Player: {{this.player}}</h3>
+
+
+  <button class="btn btn-danger mt-4" (click)="newGame()"
           *ngIf="winner || isDraw || freshPage">Start Game
   </button>
+
+  <h2 class="mt-4" *ngIf="winner"> Player <b class="text-danger">{{winner}}</b> won the game!</h2>
+  <h2 class="mt-4" *ngIf="isDraw">The Game is Draw !!</h2>
 
   <!--  Game board section-->
   <section *ngIf="!winner && !isDraw">
@@ -16,4 +19,15 @@
     </app-board>
   </section>
 
+  <!--  gifs section-->
+  <div class="gifImg" *ngIf="winner == 'X'">
+    <img src="assets/images/x.webp">
+  </div>
+  <div class="gifImg" *ngIf="winner == 'O'">
+    <img src="assets/images/o.webp">
+  </div>
+  <div class="gifImg" *ngIf="isDraw">
+    <img src="assets/images/draw.webp">
+  </div>
 </div>
+
