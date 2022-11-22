@@ -1,8 +1,8 @@
 <div class="container-fluid">
 
-  <h1 class="gameHeading" *ngIf="freshPage || winner || isDraw">TIC TAC TOE</h1>
+  <img src="assets/images/bgtic.png" class="ticTacToeLogo" *ngIf="freshPage || winner || isDraw">
+  <h1 class="gameHeading" *ngIf="freshPage || winner || isDraw">Tic Tac Toe</h1>
   <h3 class="mt-4 mb-4" *ngIf="!winner && !isDraw && !freshPage"> Current Player: {{this.player}}</h3>
-
 
   <button class="btn btn-danger mt-4" (click)="newGame()"
           *ngIf="winner || isDraw || freshPage">Start Game
@@ -21,13 +21,13 @@
 
   <!--  gifs section-->
   <div class="gifImg" *ngIf="winner == 'X'">
-    <img src="assets/images/x.webp">
+    <img src="assets/images/x.gif">
   </div>
   <div class="gifImg" *ngIf="winner == 'O'">
-    <img src="assets/images/o.webp">
+    <img src="assets/images/o.gif">
   </div>
   <div class="gifImg" *ngIf="isDraw">
-    <img src="assets/images/draw.webp">
+    <img src="assets/images/draw.gif">
   </div>
 </div>
 

@@ -12,9 +12,13 @@
   background: linear-gradient(0.7turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 
+.ticTacToeLogo {
+  width: 100px;
+  height: 100px;
+}
+
 .gameHeading {
   font-size: 50px;
-  letter-spacing: 3px;
 }
 
 .square-container {
@@ -47,11 +51,13 @@ app-board {
 }
 
 .gifImg {
+  width: 250px;
   margin-top: 30px;
+  background: none;
 }
 
 .gifImg img {
-  width: 100%;
+  width: 250px;
   height: 200px;
 }
 
@@ -99,8 +105,14 @@ app-board {
     height: 100px;
   }
 
+  .gifImg {
+    width: 200px;
+    margin-top: 30px;
+    background: none;
+  }
+
   .gifImg img {
-    width: 100%;
+    width: 200px;
     height: 200px;
   }
 

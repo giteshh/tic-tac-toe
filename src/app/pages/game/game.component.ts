@@ -40,6 +40,7 @@ export class GameComponent implements OnInit {
     if (!this.winner && this.counter == 9) {
       this.isDraw = 'yes';
     }
+
   }
 
   calculateWinner() {
@@ -61,4 +62,5 @@ export class GameComponent implements OnInit {
     }
     return null;
   }
+
 }
