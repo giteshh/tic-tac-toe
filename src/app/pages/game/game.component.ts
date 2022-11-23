@@ -63,4 +63,7 @@ export class GameComponent implements OnInit {
     return null;
   }
 
+  reloadGame() {
+    this.squares = Array(9).fill(null);
+  }
 }

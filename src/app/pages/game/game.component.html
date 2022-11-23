@@ -2,14 +2,13 @@
 
   <img src="assets/images/bgtic.png" class="ticTacToeLogo" *ngIf="freshPage || winner || isDraw">
   <h1 class="gameHeading" *ngIf="freshPage || winner || isDraw">Tic Tac Toe</h1>
-  <h3 class="mt-4 mb-4" *ngIf="!winner && !isDraw && !freshPage"> Current Player: {{this.player}}</h3>
-
-  <button class="btn btn-danger mt-4" (click)="newGame()"
+  <h6 class="mb-5 mr-5" *ngIf="!winner && !isDraw && !freshPage"> Current Player: {{this.player}}</h6>
+  <button id="newGameBtn" class="btn btn-danger mt-4" (click)="newGame()"
           *ngIf="winner || isDraw || freshPage">Start Game
   </button>
 
-  <h2 class="mt-4" *ngIf="winner"> Player <b class="text-danger">{{winner}}</b> won the game!</h2>
-  <h2 class="mt-4" *ngIf="isDraw">The Game is Draw !!</h2>
+  <h4 class="mt-4" *ngIf="winner"> Player <b class="text-danger">{{winner}}</b> won the game!</h4>
+  <h4 class="mt-4" *ngIf="isDraw">Oops, it's a tie !!</h4>
 
   <!--  Game board section-->
   <section *ngIf="!winner && !isDraw">
